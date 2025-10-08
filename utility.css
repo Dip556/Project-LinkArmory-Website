@@ -1,0 +1,67 @@
+.button {
+    background-color: var(--Logofont-color);
+    color: var(--font-color);
+    border: 2px solid var(--Logofont-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #09820d;
+    border: 2px solid #09820d;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+/* Custom Styles for aesthetic and structure */
+
+.productMRP {
+    text-decoration: line-through;
+    color: #9ca3af;
+    /* Gray-400 */
+}
+
+.cards {
+    /* Ensures cards are positioned correctly within the grid */
+    display: contents;
+}
+
+/* Style for the button clicks */
+.cartlncrement:active,
+.cartDecrement:active,
+.slider-btn:active {
+    transform: scale(0.95);
+}
+
+/* Fixes button alignment for the slider */
+.slider-btn {
+    line-height: 1;
+    /* Prevents button height from affecting positioning */
+}
+
+/* The slide element must prevent shrinking and occupy the full width of the container */
+.productSlide {
+    flex-shrink: 0;
+    width: 100%;
+    /* Important: Each slide takes 100% of the visible container width */
+}
+
+/* Apply transition to the wrapper for smooth sliding */
+.slidesWrapper {
+    transition: transform 0.3s ease-in-out;
+}

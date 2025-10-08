@@ -1,0 +1,325 @@
+[
+    {
+        "id": 0,
+        "category": "Drone",
+        "images": [
+            "assets/Product0.0.jpg",
+            "assets/Product0.1.jpg",
+            "assets/Product0.2.jpg"
+           ],
+        "name": "Guardian Wing Rescue - Drone",
+        "rating": 5,
+        "description": "Versatile drone for flood rescues, military ops, and communication support in dangerous terrains.",
+        "price": "₹3.20k",
+        "basePriceNum": 320000,
+        "mrp": "₹4.00k",
+        "discount": "20% off"
+    },
+    {
+        "id": 1,
+        "category": "Controller",
+        "images": [
+            "assets/Product1.1.jpg",
+            "assets/Product1.2.jpg"
+        ],
+        "name": "Pixhawk - Advanced Flight Controller",
+        "rating": 4,
+        "description": "Robust flight control unit with multiple ports for drones, supporting navigation and telemetry in diverse missions.",
+        "price": "₹14,281",
+        "basePriceNum": 14281,
+        "mrp": "₹20,000",
+        "discount": "30% off"
+    },
+    {
+        "id": 2,
+        "category": "Motor",
+        "images": [
+            "assets/Product2.jpg"
+        ],
+        "name": "T-Motor Maxi Copter Motor",
+        "rating": 4,
+        "description": "High-performance brushless motor for drones, optimized for 10x4.5 to 8x4.5 props with reliable power.",
+        "price": "₹1,500",
+        "basePriceNum": 1500,
+        "mrp": "₹2,250",
+        "discount": "33% off"
+    },
+    {
+        "id": 3,
+        "category": "Propellers",
+        "images": [
+            "assets/Product3.jpg"
+        ],
+        "name": "Aero Precision - Drone Propellers",
+        "rating": 4,
+        "description": "Durable, high-efficiency propellers designed for optimal drone flight performance and stability.",
+        "price": "₹117",
+        "basePriceNum": 117,
+        "mrp": "₹180",
+        "discount": "35% off"
+    },
+    {
+        "id": 4,
+        "category": "Frame",
+        "images": [
+            "assets/Product4.jpg"
+        ],
+        "name": "QuadX 450 - Drone Frame",
+        "rating": 4,
+        "description": "Lightweight 450mm quadcopter frame, durable for racing and aerial photography with easy assembly.",
+        "price": "₹5,999",
+        "basePriceNum": 5999,
+        "mrp": "₹7,299",
+        "discount": "18% off"
+    },
+    {
+        "id": 5,
+        "category": "Camera",
+        "images": [
+            "assets/Product5.jpg"
+        ],
+        "name": "Dual-Lens Drone Camera Module",
+        "rating": 4,
+        "description": "Compact dual-lens camera for drones, offering high-resolution imaging and obstacle detection.",
+        "price": "₹2,049",
+        "basePriceNum": 2049,
+        "mrp": "₹3,845",
+        "discount": "46% off"
+    },
+    {
+        "id": 6,
+        "category": "Cells",
+        "images": [
+            "assets/Product6.jpg"
+        ],
+        "name": "Silicon-Capacity Drone Power Cells",
+        "rating": 4,
+        "description": "Durable lithium-ion batteries for drones, offering long-lasting power and reliable performance.",
+        "price": "₹25,000",
+        "basePriceNum": 25000,
+        "mrp": "₹36,999",
+        "discount": "32% off"
+    },
+    {
+        "id": 7,
+        "category": "PEM",
+        "images": [
+            "assets/Product7.jpg"
+        ],
+        "name": "PEM - HydroCell Electrolytic Power Unit",
+        "rating": 4,
+        "description": "Compact electrolytic cell for generating power, ideal for educational and experimental use.",
+        "price": "₹5,717",
+        "basePriceNum": 5717,
+        "mrp": "₹8,970",
+        "discount": "36% off"
+    },
+    {
+        "id": 8,
+        "category": "ESC",
+        "images": [
+            "assets/Product8.jpg"
+        ],
+        "name": "CM120 High-Power ESC Unit",
+        "rating": 4,
+        "description": "Advanced electronic speed controller for drones, ensuring efficient and reliable motor performance.",
+        "price": "₹7,999",
+        "basePriceNum": 7999,
+        "mrp": "₹9,599",
+        "discount": "16% off"
+    },
+    {
+        "id": 9,
+        "category": "GPS",
+        "images": [
+            "assets/Product9.jpg"
+        ],
+        "name": "Neo GPS Navigation Module - EPORM",
+        "rating": 4,
+        "description": "Compact GPS module for drones, providing precise location tracking and reliable navigation.",
+        "price": "₹230",
+        "basePriceNum": 230,
+        "mrp": "₹370",
+        "discount": "37% off"
+    },
+    {
+        "id": 10,
+        "category": "Sensor",
+        "images": [
+            "assets/Product10.jpg"
+        ],
+        "name": "LPS22DF - Digital Barometer Sensor Module",
+        "rating": 4,
+        "description": "Compact barometer for drones, providing accurate altitude and pressure measurements reliably.",
+        "price": "₹899",
+        "basePriceNum": 899,
+        "mrp": "₹1,599",
+        "discount": "44% off"
+    },
+    {
+        "id": 11,
+        "category": "Processor",
+        "images": [
+            "assets/Product11.jpg"
+        ],
+        "name": "Micro Quad Core Processor",
+        "rating": 4,
+        "description": "6 Axis IMU with MCU +Accelerometer + Gyroscope, delivering high-speed processing and efficient performance.",
+        "price": "₹349",
+        "basePriceNum": 349,
+        "mrp": "₹549",
+        "discount": "36% off"
+    },
+    {
+        "id": 12,
+        "category": "Receiver",
+        "images": [
+            "assets/Product12.1.jpg",
+            "assets/Product12.2.jpg",
+            "assets/Product12.3.jpg",
+            "assets/Product12.4.jpg"
+        ],
+        "name": "OmniCast Audio Receiver Speaker",
+        "rating": 4,
+        "description": "Versatile receiver speaker for drones, delivering clear audio communication in diverse conditions.",
+        "price": "₹27,999",
+        "basePriceNum": 27999,
+        "mrp": "₹42,200",
+        "discount": "34% off"
+    },
+    {
+        "id": 13,
+        "category": "Infra Beam",
+        "images": [
+            "assets/Product13.1.jpg",
+            "assets/Product13.2.jpg",
+            "assets/Product13.3.jpg",
+            "assets/Product13.4.jpg"
+        ],
+        "name": "InfraBeam Sensor",
+        "rating": 4,
+        "description": "Compact infrared sensor delivers precise distance detection for robotics, automation, and IoT projects.",
+        "price": "₹129",
+        "basePriceNum": 129,
+        "mrp": "₹210",
+        "discount": "39% off"
+    },
+    {
+        "id": 14,
+        "category": "LED",
+        "images": [
+            "assets/Product14.1.jpg",
+            "assets/Product14.2.jpg",
+            "assets/Product14.3.jpg",
+            "assets/Product14.4.jpg"
+        ],
+        "name": "InfraGlow LED",
+        "rating": 4,
+        "description": "High-efficiency infrared LED ideal for remote controls, sensors, and DIY electronics projects.",
+        "price": "₹89",
+        "basePriceNum": 89,
+        "mrp": "₹164",
+        "discount": "46% off"
+    },
+    {
+        "id": 15,
+        "category": "IR Sensor",
+        "images": [
+            "assets/Product15.1.jpg",
+            "assets/Product15.2.jpg",
+            "assets/Product15.3.jpg",
+            "assets/Product15.4.jpg",
+            "assets/Product15.5.jpg"
+        ],
+        "name": "Precision IR Sensor",
+        "rating": 4,
+        "description": "High-accuracy infrared sensor for reliable detection and automation projects.",
+        "price": "₹120",
+        "basePriceNum": 120,
+        "mrp": "₹240",
+        "discount": "50% off"
+    },
+    {
+        "id": 16,
+        "category": "IR Torch",
+        "images": [
+            "assets/Product16.1.jpg",
+            "assets/Product16.2.jpg",
+            "assets/Product16.3.jpg",
+            "assets/Product16.4.jpg"
+        ],
+        "name": "IR Power Torch",
+        "rating": 4,
+        "description": "Durable, portable LED torch with long-lasting battery for reliable outdoor use.",
+        "price": "₹359",
+        "basePriceNum": 359,
+        "mrp": "₹559",
+        "discount": "56% off"
+    },
+    {
+        "id": 17,
+        "category": "Panel",
+        "images": [
+            "assets/Product17.1.jpg",
+            "assets/Product17.2.jpg",
+            "assets/Product17.3.jpg"
+        ],
+        "name": "Solar Energy Panel",
+        "rating": 4,
+        "description": "Compact, efficient solar panel for eco-friendly power generation and charging.",
+        "price": "₹646",
+        "basePriceNum": 646,
+        "mrp": "₹896",
+        "discount": "28% off"
+    },
+    {
+        "id": 18,
+        "category": "Mounter",
+        "images": [
+            "assets/Product18.1.jpg",
+            "assets/Product18.2.jpg",
+            "assets/Product18.3.jpg",
+            "assets/Product18.4.jpg"
+        ],
+        "name": "IR Power Torch - Mounter",
+        "rating": 4,
+        "description": "Durable, adjustable camera mount for stable, professional-grade photography setups.",
+        "price": "₹268",
+        "basePriceNum": 268,
+        "mrp": "₹399",
+        "discount": "33% off"
+    },
+    {
+        "id": 19,
+        "category": "Clamp",
+        "images": [
+            "assets/Product19.1.jpg",
+            "assets/Product19.2.jpg",
+            "assets/Product19.3.jpg"
+        ],
+        "name": "Heavy-Duty Clamp",
+        "rating": 4,
+        "description": "Robust, adjustable clamp for secure mounting in industrial and DIY projects.",
+        "price": "₹239",
+        "basePriceNum": 239,
+        "mrp": "₹389",
+        "discount": "39% off"
+    },
+    {
+        "id": 20,
+        "category": "Tripod",
+        "images": [
+            "assets/Product20.1.jpg",
+            "assets/Product20.2.jpg",
+            "assets/Product20.3.jpg",
+            "assets/Product20.4.jpg"
+        ],
+        "name": "Elite Tripod Stand",
+        "rating": 4,
+        "description": "Sturdy, adjustable tripod for professional photography and video recording.",
+        "price": "₹399",
+        "basePriceNum": 399,
+        "mrp": "₹529",
+        "discount": "25% off"
+    }
+]
