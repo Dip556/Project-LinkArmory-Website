@@ -2,7 +2,7 @@
 let cart = [];
 
 // Cache the product data once it's fetched, for easy lookup
-let allProductsData = []; 
+let allProductsData = [];
 
 // --- 1. Helper Functions ---
 
@@ -14,6 +14,26 @@ function formatCurrency(amount) {
         currency: 'INR',
         minimumFractionDigits: 0
     }).format(amount);
+}
+
+// Helper function to parse formatted currency string to number (e.g., "₹4.00k" -> 400000)
+function parseCurrency(str) {
+    if (!str) return 0;
+    const cleaned = str.replace(/[^\d.k]/g, ''); // Remove non-numeric except 'k' and '.'
+    if (cleaned.endsWith('k')) {
+        return parseFloat(cleaned.slice(0, -1)) * 1000;
+    }
+    return parseFloat(cleaned) || 0;
+}
+
+// Functions to save and load cart from localStorage
+function saveCartToStorage() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+function loadCartFromStorage() {
+    const stored = localStorage.getItem('cart');
+    return stored ? JSON.parse(stored) : [];
 }
 
 // Function to update the number on the nav bar cart icon (NEW)
@@ -89,6 +109,16 @@ function createProductCard(product) {
             `;
 }
 
+function filterProducts(searchTerm) {
+  if (!searchTerm) return allProductsData;
+  const term = searchTerm.toLowerCase();
+  return allProductsData.filter(product => 
+    product.name.toLowerCase().includes(term) ||
+    product.category.toLowerCase().includes(term) ||
+    product.description.toLowerCase().includes(term)
+  );
+}
+
 // --- 2. Card Rendering and Quantity Logic (Unchanged) ---
 
 function renderCards(data, containerId) {
@@ -138,6 +168,14 @@ function handleQuantityChange(event) {
     totalPriceDisplay.textContent = formattedTotal;
 
     console.log(`Updated "${cardArticle.querySelector('.productName').textContent}" - Qty: ${currentQuantity}, Total: ${formattedTotal}`);
+}
+
+function attachProductEventListeners(containerId) {
+    const productContainer = document.getElementById(containerId);
+    if (productContainer) {
+        productContainer.addEventListener('click', handleQuantityChange);
+        productContainer.addEventListener('click', addToCart);
+    }
 }
 
 // --- 3. Cart Logic ---
@@ -192,7 +230,10 @@ function renderCart() {
     cartList.innerHTML = cartItemsHTML;
     
     // 3. Update the Nav Bar Count
-    updateCartNavCount(); 
+    updateCartNavCount();
+
+    // 4. Save cart to localStorage
+    saveCartToStorage();
 }
 
 function addToCart(event) {
@@ -223,6 +264,7 @@ function addToCart(event) {
             name: productDetails.name,
             price: productDetails.price,
             mrp: productDetails.mrp,
+            mrpNum: parseCurrency(productDetails.mrp),
             discount: productDetails.discount,
             image: productDetails.images[0] || "https://placehold.co/600x400/cccccc/000000?text=No+Image",
             basePriceNum: productDetails.basePriceNum,
@@ -277,24 +319,70 @@ async function fetchProductsAndRender() {
         
         // Store the fetched data globally for cart lookup
         allProductsData = productsData;
-        
-        // Render the product cards
-        renderCards(productsData, containerId);
 
-        // Render the empty cart initially (updates grand total and nav count)
-        renderCart(); 
-
-        // Attach event listeners
-        const productContainer = document.getElementById(containerId);
-        const cartTab = document.querySelector('.cartTab'); 
-
-        if (productContainer) {
-            productContainer.addEventListener('click', handleQuantityChange);
-            productContainer.addEventListener('click', addToCart); 
+        // Determine which products to display based on the page
+        let productsToDisplay = productsData;
+        const currentPath = window.location.pathname;
+        if (currentPath.includes('index.html') || currentPath === '/' || currentPath.endsWith('/')) {
+            // Home page: show first 8 products
+            productsToDisplay = productsData.slice(0, 8);
         }
+        // Products page: show all products (default)
+
+        // Load cart from localStorage
+        cart = loadCartFromStorage();
+
+        // Render the product cards
+        renderCards(productsToDisplay, containerId);
+        attachProductEventListeners(containerId);
+
+        // Render the cart (updates grand total and nav count)
+        renderCart();
+
+        // Set active nav link
+        const path = window.location.pathname;
+        let activeLink = '';
+        if (path.includes('index.html') || path === '/' || path.endsWith('/')) {
+            activeLink = 'Home';
+        } else if (path.includes('Products.html')) {
+            activeLink = 'Products';
+        }
+        if (activeLink) {
+            const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav-links a');
+            navLinks.forEach(link => {
+                if (link.textContent.trim() === activeLink) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Attach cart event listeners
+        const cartTab = document.querySelector('.cartTab'); 
 
         if (cartTab) {
             cartTab.addEventListener('click', handleCartQuantityChange); 
+        }
+
+        // Attach search event listeners
+        const searchInput = document.getElementById('searchForm');
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const term = e.target.value.trim();
+                const filtered = filterProducts(term);
+                renderCards(filtered, containerId);
+                attachProductEventListeners(containerId);
+            });
+        }
+
+        const searchButton = document.querySelector('.searchIcon');
+        if (searchButton) {
+            searchButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                const term = searchInput ? searchInput.value.trim() : '';
+                const filtered = filterProducts(term);
+                renderCards(filtered, containerId);
+                attachProductEventListeners(containerId);
+            });
         }
         
 

@@ -13,7 +13,7 @@
     align-items: center;
     cursor: context-menu;
 
-    box-shadow: -3px 0px 14px 10px rgba(0, 0, 0, 0.219);
+    box-shadow: -3px 0px 14px 10px rgba(57, 55, 55, 0.219);
     transition: .3s ease-in-out;
 
 }

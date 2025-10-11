@@ -70,6 +70,14 @@ body {
     /* text-decoration: underline; */
 }
 
+.navBar .nav-links li a.active {
+    color: var(--Logofont-color);
+}
+
+.navBar .nav-links li a.active:hover {
+    color: var(--Logofont-color);
+}
+
 
 .navBar .nav-icons {
     display: flex;
@@ -208,6 +216,14 @@ body {
     color: var(--Logofont-color);
     transition: all 0.3s ease;
     /* text-decoration: underline; */
+}
+
+.navBar .mobile-nav-links li a.active {
+    color: var(--Logofont-color);
+}
+
+.navBar .mobile-nav-links li a.active:hover {
+    color: var(--Logofont-color);
 }
 
 
@@ -727,9 +743,6 @@ body {
     line-height: 1.6;
     color: #cccccc;
     margin-bottom: 15px;
-    height: 60px;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .mainContent .products .cards .information .productPriceElement {

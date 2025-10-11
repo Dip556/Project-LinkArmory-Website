@@ -88,8 +88,8 @@ button.ghost {
 .container {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(177, 175, 175, 0.37), 
-                0 10px 10px rgba(115, 114, 114, 0.428);
+    box-shadow: 0px 0px 28px rgba(177, 175, 175, 0.37), 
+                0px 0px 10px 7px rgba(115, 114, 114, 0.428);
     position: relative;
     overflow: hidden;
     width: 768px;

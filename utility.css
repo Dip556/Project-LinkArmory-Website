@@ -65,3 +65,46 @@ a {
 .slidesWrapper {
     transition: transform 0.3s ease-in-out;
 }
+
+
+
+/* General Layout and Typography */
+
+
+/* Ensures dynamic cards flow correctly within the grid container in the HTML */
+.cards {
+    display: contents; 
+}
+
+/* Override for the MRP text */
+.productMRP {
+    text-decoration: line-through;
+    color: #9ca3af; /* Gray-400 */
+}
+
+/* --- Interactive Element Styles --- */
+
+/* Provides a visual feedback effect for all interactive buttons */
+.cartlncrement:active, 
+.cartDecrement:active, 
+.slider-btn:active {
+    transform: scale(0.95);
+}
+
+/* Fixes vertical alignment issue for the chevron icons */
+.slider-btn {
+    line-height: 1;
+}
+
+/* --- Image Slider Specific Styles --- */
+
+/* Ensures each image slide prevents shrinking and takes up 100% of the image container's width */
+.productSlide {
+    flex-shrink: 0;
+    width: 100%; 
+}
+
+/* Applies a smooth animation effect when the slidesWrapper is horizontally translated */
+.slidesWrapper {
+    transition: transform 0.3s ease-in-out;
+}

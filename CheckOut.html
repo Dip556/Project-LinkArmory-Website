@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkArmory- Proceed to Buy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="CheckOut.css">
+
+</head>
+
+<body>
+    <nav class="navBar">
+        <div class="logo">
+            <img src="assets/Logo.png" alt="">
+            <h1>Link<b>Armory</b></h1>
+        </div>
+
+        <!-- DESKTOP NAVIGATION MENU -->
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="Orders.html">Orders</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+
+        <!-- MOBILE NAVIGATION MENU -->
+
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="Orders.html">Orders</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+
+    <section class="body">
+
+        <!-- Main Checkout Container -->
+        <div class="Container">
+
+            <!-- Left Column: Checkout Form -->
+            <div class="leftColumn">
+                <h1>Check<b>out</b></h1>
+
+                <form id="checkoutForm" class="checkoutForm">
+                    <!-- Contact Information -->
+                    <section class="form-section ">
+                        <h2><img src="assets/email.svg" alt="">Contact Information</h2>
+                        <div class="ContactInfo">
+                            <div>
+                                <label for="email" class="">Email Address</label>
+                                <input type="email" id="email" name="email" required class="input-field inpFild">
+                            </div>
+                            <div>
+                                <label for="phone" class="">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="input-field inpFild">
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Shipping Address -->
+                    <section class="form-section ">
+                        <h2 class=""><img src="assets/location.svg" alt=""> Shipping Address</h2>
+                        <div class="addressInfo">
+                            <div>
+                                <label for="fullName" class="">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" required class="input-field">
+                            </div>
+                            <div>
+                                <label for="address1" class="">Address</label>
+                                <input type="text" id="address1" name="address1" required class="input-field">
+                            </div>
+                            <div>
+                                <label for="address2" class="">Landmark</label>
+                                <input type="text" id="address2" name="address2" class="input-field">
+                            </div>
+                            <div class="locationInfo">
+                                <div>
+                                    <label for="city" class="">City</label>
+                                    <input type="text" id="city" name="city" required class="input-field inpFild2">
+                                </div>
+                                <div>
+                                    <label for="state" class="">State</label>
+                                    <input type="text" id="state" name="state" required class="input-field inpFild2">
+                                </div>
+                                <div>
+                                    <label for="zip" class="">Pin Code</label>
+                                    <input type="text" id="zip" name="zip" required class="input-field inpFild2">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <button type="submit" class="button OrderBtn">Checkout</button>
+                </form>
+            </div>
+
+            <!-- Right Column: Order Summary -->
+            <div class="rightColumn">
+                <div>
+                    <h2><img src="assets/orderSmrLogo.svg" alt="">Order Summary</h2>
+
+                    <div class="orderItems" id="orderItems">
+
+                        <!-- Example Order Items -->
+
+                        <!-- <div class="itemContainer">
+                            <div class="itemImg">
+                                <img src="assets/Product0.0.jpg" alt="">
+                            </div>
+                            <div class="itemInfo">
+                                <h3 class="itemName">Guardian Wing Rescue - Drone</h3>
+                                <div class="itemPrice">
+                                    <p class="productPrice">₹3.20k</p>
+                                    <p class="productMRP">₹4.00k</p>
+                                    <p class="productDiscount">20% off</p>
+                                </div>
+                            </div>
+                            <button class="quantityBtn">Qty:
+                                <select name="Quantity" id="">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                </select>
+                            </button>
+                        </div> -->
+                    
+
+
+                    </div>
+
+                    <div class="billSection">
+                        <div class="bills">
+                            <span>Subtotal</span>
+                            <span id="subtotal" class="font-medium">₹3.20k</span>
+                        </div>
+                        <div class="bills">
+                            <span>Discount</span>
+                            <span id="discount" class="font-medium">-₹80,000</span>
+                        </div>
+                        <div class="bills">
+                            <span>Shipping</span>
+                            <span id="shipping" class="font-medium">₹50</span>
+                        </div>
+                        <div class="bills">
+                            <span>Secure Packaging</span>
+                            <span id="secure-packaging " class="font-medium">₹10</span>
+                        </div>
+                        <div class="totalSection">
+                            <div class="total bills">
+                                <span>Order Total</span>
+                                <span id="total">₹3.20k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="userId">
+                    Your userId: <span id="currentUserId"> Loading<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Message Modal -->
+        <!-- <div id="messageModal" class="">
+            <div class="">
+                <div class=""><img src="assets/rightTick.svg" alt=""></div>
+                <h3 id="modalTitle" class="text-2xl font-bold text-gray-900 mb-3">Order Placed!</h3>
+                <p id="modalMessage" class="text-gray-700 mb-6">Your order has been successfully placed. Thank you for
+                    your purchase!</p>
+                <button id="closeModal" class="">
+                    Close
+                </button>
+            </div>
+        </div> -->
+
+    </section>
+
+
+
+
+
+    <script src="CheckOut.js" type="module"></script>
+</body>
+
+</html>
