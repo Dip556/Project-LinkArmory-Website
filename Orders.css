@@ -38,7 +38,7 @@
     background: linear-gradient(to right, #121826, #064189);
     border-radius: 10px;
     padding: 25px;
-    box-shadow: 0px 0px 10px 11px rgba(205, 203, 203, 0.3);
+    box-shadow: 0px 0px 6px 5px rgba(205, 203, 203, 0.3);
 }
 
 .orderItemsSection h2 {
@@ -125,7 +125,7 @@
     background: linear-gradient(to right, #121826, #064189);
     border-radius: 10px;
     padding: 25px;
-    box-shadow: 0px 0px 10px 11px rgba(205, 203, 203, 0.3);
+    box-shadow: 0px 0px 6px 5px rgba(205, 203, 203, 0.3);
 }
 
 .deliverySection h2 {
@@ -173,7 +173,7 @@
     background: linear-gradient(to right, #121826, #064189);
     border-radius: 10px;
     padding: 25px;
-    box-shadow: 0px 0px 10px 11px rgba(205, 203, 203, 0.3);
+    box-shadow: 0px 0px 6px 5px rgba(205, 203, 203, 0.3);
 }
 
 .trackingSection h2 {
@@ -310,7 +310,7 @@
     background: linear-gradient(to right, #121826, #064189);
     border-radius: 10px;
     padding: 25px;
-    box-shadow: 0px 0px 10px 11px rgba(205, 203, 203, 0.3);
+    box-shadow: 0px 0px 6px 5px rgba(205, 203, 203, 0.3);
 }
 
 .orderSummarySection h2 {
@@ -358,7 +358,7 @@
     background: linear-gradient(to right, #121826, #064189);
     border-radius: 10px;
     padding: 25px;
-    box-shadow: 0px 0px 10px 11px rgba(205, 203, 203, 0.3);
+    box-shadow: 0px 0px 6px 5px rgba(205, 203, 203, 0.3);
     display: flex;
     gap: 15px;
     justify-content: center;
