@@ -90,7 +90,7 @@ function calculateTotals() {
     if (checkoutCart.length === 0) {
         subtotalEl.textContent = formatCurrency(0);
         discountEl.textContent = formatCurrency(0);
-        totalEl.textContent = formatCurrency(50 + 10); // Fixed shipping and packaging
+        totalEl.textContent = formatCurrency(0 + 20); // Fixed shipping and packaging
         return;
     }
 
@@ -101,7 +101,7 @@ function calculateTotals() {
     const youSave = checkoutCart.reduce((sum, item) => sum + ((parseMRP(item.mrp) - item.basePriceNum) * item.quantity), 0);
 
     // Order Total: Subtotal + Shipping (50) + Secure Packaging (10)
-    const orderTotal = subtotal + 50 + 10;
+    const orderTotal = subtotal + 0 + 20;
 
     subtotalEl.textContent = formatCurrency(subtotal);
     discountEl.textContent = formatCurrency(youSave);

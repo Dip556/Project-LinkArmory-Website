@@ -338,6 +338,10 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+#summaryDiscount, #summaryShipping {
+    color: #3cf72b;
+}
+
 .summaryItem:last-child {
     border-bottom: none;
 }
@@ -350,7 +354,7 @@
     border-top: 2px solid #4ca644;
     font-size: 1.1rem;
     font-weight: 600;
-    color: #4ca644;
+    color: #6fe964;
 }
 
 /* Order Actions */
