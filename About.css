@@ -1,7 +1,7 @@
 .aboutMain {
     padding: 80px 20px;
     text-align: center;
-    background-color: var(--upbackground-color);
+    background-color: #071a01;
 }
 
 .aboutHero {
@@ -12,6 +12,9 @@
     font-size: 48px;
     margin-bottom: 20px;
     color: var(--font-color);
+}
+.aboutHero h1 b {
+    color: var(--Logofont-color);
 }
 
 .aboutHero p {
@@ -37,6 +40,9 @@
 .aboutText h2 {
     font-size: 32px;
     margin-bottom: 20px;
+    color: var(--font-color);
+}
+.aboutText h2 b {
     color: var(--Logofont-color);
 }
 

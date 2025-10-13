@@ -893,6 +893,9 @@ body {
     font-size: 36px;
     margin-bottom: 20px;
 }
+.describeBox .describeContent h1 b {
+    color: var(--Logofont-color);
+}
 
 .describeBox .describeContent p {
     font-size: 18px;
