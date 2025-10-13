@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkArmory - Orders</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="Orders.css">
+</head>
+
+<body>
+    <nav class="navBar">
+        <div class="logo">
+            <img src="assets/Logo.png" alt="">
+            <h1>Link<b>Armory</b></h1>
+        </div>
+
+        <!-- DESKTOP NAVIGATION MENU -->
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="Orders.html">Orders</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+
+        <!-- MOBILE NAVIGATION MENU -->
+
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="Orders.html">Orders</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <main class="ordersContainer">
+        <div class="ordersHeader">
+            <h1>Your <b>Orders</b></h1>
+            <p>Track your orders and manage your purchases</p>
+        </div>
+
+        <div class="ordersContent">
+            <!-- Order Items Section -->
+            <section class="orderItemsSection">
+                <h2>Order <b>Items</b></h2>
+                <div class="orderItems" id="orderItems">
+                    <!-- Items will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Delivery Date Section -->
+            <section class="deliverySection">
+                <h2>Estimated <b>Delivery</b></h2>
+                <div class="deliveryInfo">
+                    <div class="deliveryDate" id="deliveryDate">
+                        <!-- Date will be populated by JavaScript -->
+                    </div>
+                    <div class="deliveryStatus">
+                        <span class="statusIcon">🚚</span>
+                        <span class="statusText">Out for Delivery</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Package Tracking Section -->
+            <section class="trackingSection">
+                <h2>Package <b>Tracking</b></h2>
+                <div class="trackingContainer">
+                    <div class="seekBar">
+                        <div class="progressBar" id="progressBar"></div>
+                        <div class="progressSteps">
+                            <div class="step active" data-step="1">
+                                <div class="stepIcon">📦</div>
+                                <span>Order Placed</span>
+                            </div>
+                            <div class="step active" data-step="2">
+                                <div class="stepIcon">🏭</div>
+                                <span>Processing</span>
+                            </div>
+                            <div class="step active" data-step="3">
+                                <div class="stepIcon">🚚</div>
+                                <span>Shipped</span>
+                            </div>
+                            <div class="step" data-step="4">
+                                <div class="stepIcon">✅</div>
+                                <span>Delivered</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timelineUpdates" id="timelineUpdates">
+                        <!-- Timeline updates will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Order Summary Section -->
+            <section class="orderSummarySection">
+                <h2>Order <b>Summary</b></h2>
+                <div class="orderSummary">
+                    <div class="summaryItem">
+                        <span>Subtotal</span>
+                        <span id="summarySubtotal">₹0</span>
+                    </div>
+                    <div class="summaryItem">
+                        <span>Discount</span>
+                        <span id="summaryDiscount">-₹0</span>
+                    </div>
+                    <div class="summaryItem">
+                        <span>Shipping</span>
+                        <span id="summaryShipping">₹50</span>
+                    </div>
+                    <div class="summaryItem">
+                        <span>Secure Packaging</span>
+                        <span id="summaryPackaging">₹10</span>
+                    </div>
+                    <div class="summaryTotal">
+                        <span>Order Total</span>
+                        <span id="summaryTotal">₹0</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Order Actions -->
+            <section class="orderActions">
+                <button class="actionBtn cancelBtn" id="cancelOrderBtn">
+                    <span>❌</span> Request Cancellation
+                </button>
+                <button class="actionBtn contactBtn">
+                    <span>📞</span> Contact Support
+                </button>
+            </section>
+        </div>
+    </main>
+
+    <!-- Cancellation Modal -->
+    <div id="cancellationModal" class="modal">
+        <div class="modalContent">
+            <h3>Request Order Cancellation</h3>
+            <p>Are you sure you want to cancel this order? This action cannot be undone.</p>
+            <div class="modalActions">
+                <button class="modalBtn cancel" id="confirmCancel">Yes, Cancel Order</button>
+                <button class="modalBtn close" id="closeModal">Keep Order</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="nav.js"></script>
+    <script src="Orders.js"></script>
+</body>
+
+</html>

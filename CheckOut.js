@@ -8,6 +8,18 @@ function formatCurrency(amount) {
     }).format(amount);
 }
 
+// Helper function to parse MRP string to number
+function parseMRP(mrpString) {
+    // Remove ₹ symbol and commas
+    let numStr = mrpString.replace('₹', '').replace(/,/g, '');
+    // Handle 'k' for thousands
+    if (numStr.includes('k')) {
+        numStr = numStr.replace('k', '');
+        return parseFloat(numStr) * 1000;
+    }
+    return parseFloat(numStr);
+}
+
 // Global cart array for checkout
 let checkoutCart = [];
 
@@ -85,14 +97,14 @@ function calculateTotals() {
     // Subtotal: sum of (basePriceNum * quantity)
     const subtotal = checkoutCart.reduce((sum, item) => sum + (item.basePriceNum * item.quantity), 0);
 
-    // Total Discount: sum of ((mrpNum - basePriceNum) * quantity)
-    const totalDiscount = checkoutCart.reduce((sum, item) => sum + ((item.mrpNum - item.basePriceNum) * item.quantity), 0);
+    // You Save: sum of ((parseMRP(item.mrp) - item.basePriceNum) * quantity)
+    const youSave = checkoutCart.reduce((sum, item) => sum + ((parseMRP(item.mrp) - item.basePriceNum) * item.quantity), 0);
 
-    // Order Total: Subtotal - Total Discount + Shipping (50) + Secure Packaging (10)
-    const orderTotal = subtotal - totalDiscount + 50 + 10;
+    // Order Total: Subtotal + Shipping (50) + Secure Packaging (10)
+    const orderTotal = subtotal + 50 + 10;
 
     subtotalEl.textContent = formatCurrency(subtotal);
-    discountEl.textContent = formatCurrency(totalDiscount); // Display as positive, but in bill it's negative
+    discountEl.textContent = formatCurrency(youSave);
     totalEl.textContent = formatCurrency(orderTotal);
 
     // Store orderTotal in localStorage for payment page

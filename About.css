@@ -1,0 +1,109 @@
+.aboutMain {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: var(--upbackground-color);
+}
+
+.aboutHero {
+    margin-bottom: 60px;
+}
+
+.aboutHero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--font-color);
+}
+
+.aboutHero p {
+    font-size: 20px;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.aboutContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.aboutText {
+    flex: 1;
+    text-align: left;
+}
+
+.aboutText h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--Logofont-color);
+}
+
+.aboutText p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.aboutText ul {
+    list-style: none;
+    padding: 0;
+}
+
+.aboutText ul li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cccccc;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.aboutText ul li::before {
+    content: "✓";
+    color: var(--Logofont-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.aboutImage {
+    flex: 1;
+    text-align: center;
+}
+
+.aboutImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .aboutContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .aboutText {
+        text-align: center;
+    }
+
+    .aboutHero h1 {
+        font-size: 36px;
+    }
+
+    .aboutHero p {
+        font-size: 18px;
+    }
+
+    .aboutText h2 {
+        font-size: 28px;
+    }
+
+    .aboutText p {
+        font-size: 16px;
+    }
+}

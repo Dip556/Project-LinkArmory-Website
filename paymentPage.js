@@ -115,15 +115,15 @@ const payButtons = document.querySelectorAll('.pay-btn');
 payButtons.forEach(button => {
     button.addEventListener('click', (e) => {
         e.preventDefault();
-        
+
         // Get the active payment section
         const activeSection = document.querySelector('.payment-section.active');
         const sectionId = activeSection.id;
-        
+
         // Basic validation based on payment method
         let isValid = false;
         let message = '';
-        
+
         switch(sectionId) {
             case 'upi-section':
                 const upiId = document.getElementById('upi-id').value;
@@ -134,13 +134,13 @@ payButtons.forEach(button => {
                     message = 'Please enter a valid UPI ID';
                 }
                 break;
-                
+
             case 'card-section':
                 const cardNumber = document.getElementById('card-number').value;
                 const expiry = document.getElementById('expiry').value;
                 const cvv = document.getElementById('cvv').value;
                 const cardName = document.getElementById('card-name').value;
-                
+
                 if (cardNumber.length >= 16 && expiry.length === 5 && cvv.length === 3 && cardName) {
                     isValid = true;
                     message = 'Processing card payment...';
@@ -148,11 +148,11 @@ payButtons.forEach(button => {
                     message = 'Please fill all card details correctly';
                 }
                 break;
-                
+
             case 'netbanking-section':
                 const selectedBank = document.querySelector('.bank-option[style*="border-color: rgb(106, 17, 203)"]');
                 const otherBank = document.getElementById('other-bank').value;
-                
+
                 if (selectedBank || otherBank) {
                     isValid = true;
                     message = 'Redirecting to bank...';
@@ -160,38 +160,25 @@ payButtons.forEach(button => {
                     message = 'Please select a bank';
                 }
                 break;
-                
+
             case 'cod-section':
                 isValid = true;
                 message = 'Order confirmed! Pay on delivery.';
                 break;
         }
-        
+
         // Show result
         if (isValid) {
             button.textContent = message;
             button.style.background = 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)';
-            
+
             setTimeout(() => {
                 alert('Payment processed successfully! (Demo)');
-                // Reset button dynamically
-                const orderTotalNum = parseInt(localStorage.getItem('orderTotal')) || 0;
-                const formattedAmount = formatCurrency(orderTotalNum);
-                let resetText;
-                switch(sectionId) {
-                    case 'upi-section':
-                    case 'card-section':
-                        resetText = `Pay ${formattedAmount}`;
-                        break;
-                    case 'netbanking-section':
-                        resetText = 'Continue to Bank';
-                        break;
-                    case 'cod-section':
-                        resetText = 'Confirm Order';
-                        break;
-                }
-                button.textContent = resetText;
-                button.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                // Store order confirmation in localStorage
+                localStorage.setItem('orderConfirmed', 'true');
+                localStorage.setItem('orderDate', new Date().toISOString());
+                // Redirect to Orders page
+                window.location.href = 'Orders.html';
             }, 1500);
         } else {
             alert(message);

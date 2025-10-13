@@ -1,0 +1,196 @@
+.contactMain {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: var(--upbackground-color);
+}
+
+.contactHero {
+    margin-bottom: 60px;
+}
+
+.contactHero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--font-color);
+}
+.contactHero h1 b {
+    color: var(--Logofont-color);
+}
+
+.contactHero p {
+    font-size: 20px;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.contactContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.contactForm {
+    flex: 1;
+    background-color: var(--card-color);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contactForm h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: var(--font-color);
+}
+.contactForm h2 b {
+    color: var(--Logofont-color);
+}
+
+.formGroup {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.formGroup label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--font-color);
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: var(--Logofont-color);
+}
+
+.submitBtn {
+    background-color: var(--Logofont-color);
+    color: var(--font-color);
+    border: 2px solid var(--Logofont-color);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submitBtn:hover {
+    background-color: #09820d;
+    border-color: #09820d;
+}
+
+.contactInfo {
+    flex: 1;
+}
+
+.contactInfo h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: var(--font-color);
+}
+.contactInfo h2 b {
+    color: var(--Logofont-color);
+}
+
+.contactInfo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contactInfo ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.contactInfo ul li img {
+    height: 24px;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.contactType {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contactInfo ul li .contactType h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--font-color);
+}
+
+.contactInfo ul li .contactType p {
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.4;
+}
+
+.socialMedia {
+    margin-top: 30px;
+}
+
+.socialMedia h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--font-color);
+}
+.socialMedia h3 b {
+    color: var(--Logofont-color);
+}
+
+.socialMedia .mediahandles {
+    display: flex;
+    gap: 15px;
+}
+
+.socialMedia .mediahandles a img {
+    height: 30px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s;
+}
+
+.socialMedia .mediahandles a img:hover {
+    filter: brightness(0) invert(0.3) sepia(1) hue-rotate(90deg) saturate(5);
+}
+
+@media (max-width: 768px) {
+    .contactContent {
+        flex-direction: column;
+    }
+
+    .contactForm {
+        margin-bottom: 40px;
+    }
+
+    .contactHero h1 {
+        font-size: 36px;
+    }
+
+    .contactHero p {
+        font-size: 18px;
+    }
+
+    .contactForm h2,
+    .contactInfo h2 {
+        font-size: 28px;
+    }
+}
