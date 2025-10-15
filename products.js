@@ -195,7 +195,7 @@ function createCartItemHTML(item) {
                     <p class="productMRP">${item.mrp}</p>
                     <p class="productDiscount">${item.discount}</p>
                 </h3>
-                <p class="text-xs text-gray-700 mt-1">Item Total: <span class="font-bold">${itemTotal}</span></p>
+                <p class="itemTotal text-xs text-gray-700 mt-1">Item Total: <span class="font-bold">${itemTotal}</span></p>
             </div>
             <div class="quantityBtns">
                 <button class="quantityBtn cart-decrease" data-id="${item.id}">-</button>
