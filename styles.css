@@ -23,6 +23,10 @@ body {
     /* line-height: 1.6; */
 }
 
+body::-webkit-scrollbar {
+    width: 0;
+}
+
 .navBar {
     background-color: var(--background-color);
     color: var(--font-color);
